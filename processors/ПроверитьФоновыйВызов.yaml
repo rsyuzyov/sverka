@@ -1,4 +1,4 @@
 name: ПроверитьФоновыйВызов
-title: Проверить фоновый вызов fastex
 params:
-  - {name: ИмяИсточника, type: string, label: Источник}
+  - {label: Источник, name: ИмяИсточника, type: string}
+title: Проверить фоновый вызов fastex
