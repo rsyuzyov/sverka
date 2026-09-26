@@ -11,6 +11,11 @@ fields:
   - {name: ИзКэшаБ, title: Б из кэша, type: bool}
   - {name: СтрокА, title: Строк А, type: number}
   - {name: СтрокБ, title: Строк Б, type: number}
+  - {name: СтрокСоответствия, title: Строк соответствия ключей, type: number}
+  - {name: КлючейСовпало, title: Ключей совпало, type: number}
+  - {name: КлючейРасходится, title: Ключей расходится, type: number}
+  - {name: КлючейНетВА, title: Ключей нет в А, type: number}
+  - {name: КлючейНетВБ, title: Ключей нет в Б, type: number}
   - {name: ЧислоРасхождений, title: Число расхождений, type: number}
   - {name: ТекстОшибки, title: Текст ошибки, type: text}
 name: ЗапускСверки
@@ -24,6 +29,8 @@ tableparts:
       - {name: ЗначениеА, title: Значение А, type: number}
       - {name: ЗначениеБ, title: Значение Б, type: number}
       - {name: Разница, type: number}
+      - {name: ТекстА, title: Текст А, type: string}
+      - {name: ТекстБ, title: Текст Б, type: string}
       - {name: НетВА, title: Нет в А, type: bool}
       - {name: НетВБ, title: Нет в Б, type: bool}
     name: Расхождения

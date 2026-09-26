@@ -4,6 +4,7 @@ fields:
   - {name: ЗапросА, title: Текст запроса А, type: text}
   - {name: ИсточникБ, title: Источник Б, type: "reference:Источники"}
   - {name: ЗапросБ, title: Текст запроса Б, type: text}
+  - {name: ЗапросСоответствияБ, title: "Запрос соответствия ключей Б (КлючА, КлючБ)", type: text}
   - {name: КлючевыеПоля, title: Ключевые поля, type: string}
   - {name: ПоляЗначений, title: Поля значений, type: string}
   - {name: Погрешность, title: Допустимая погрешность, type: number}
