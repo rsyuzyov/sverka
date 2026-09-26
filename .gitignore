@@ -1,0 +1,15 @@
+# Локальные базы и служебное
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+.onebase/
+data/
+local/
+tmp/
+*.log
+# Секреты — никогда в репозиторий
+*.secret
+secrets/
+.env
