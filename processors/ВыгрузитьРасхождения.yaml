@@ -1,0 +1,6 @@
+name: ВыгрузитьРасхождения
+params:
+  - {label: Номер запуска, name: НомерЗапуска, type: string}
+  - {label: Путь к файлу CSV, name: ПутьКФайлу, type: string}
+  - {label: Тип (колонка «тип»), name: ИмяТипа, type: string}
+title: Выгрузить расхождения запуска в CSV
