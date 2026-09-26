@@ -34,6 +34,7 @@ tableparts:
       - {name: ТекстБ, title: Текст Б, type: string}
       - {name: НетВА, title: Нет в А, type: bool}
       - {name: НетВБ, title: Нет в Б, type: bool}
-      - {name: Помечен, title: Помечен на удаление, type: bool}
+      - {name: Помечен, title: Исключен из сверки, type: bool}
+      - {name: ПричинаИсключения, title: Причина исключения, type: string}
     name: Расхождения
 title: Запуск сверки
