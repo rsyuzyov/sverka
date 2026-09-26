@@ -16,6 +16,7 @@ fields:
   - {name: КлючейРасходится, title: Ключей расходится, type: number}
   - {name: КлючейНетВА, title: Ключей нет в А, type: number}
   - {name: КлючейНетВБ, title: Ключей нет в Б, type: number}
+  - {name: КлючейПомечено, title: Ключей помечено на удаление с расхождениями, type: number}
   - {name: ЧислоРасхождений, title: Число расхождений, type: number}
   - {name: ТекстОшибки, title: Текст ошибки, type: text}
 name: ЗапускСверки
@@ -33,5 +34,6 @@ tableparts:
       - {name: ТекстБ, title: Текст Б, type: string}
       - {name: НетВА, title: Нет в А, type: bool}
       - {name: НетВБ, title: Нет в Б, type: bool}
+      - {name: Помечен, title: Помечен на удаление, type: bool}
     name: Расхождения
 title: Запуск сверки
