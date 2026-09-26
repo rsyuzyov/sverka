@@ -4,5 +4,7 @@ fields:
   - {name: АдресПубликации, title: Адрес публикации базы, type: string}
   - {name: Пользователь, title: Пользователь, type: string}
   - {name: СекретПароля, title: Ссылка на секрет с паролем, type: string}
+  - {name: Пользователь77, title: Пользователь 7.7, type: string}
+  - {name: СекретПароля77, title: Ссылка на секрет с паролем 7.7, type: string}
 name: Источники
 title: Источники данных
