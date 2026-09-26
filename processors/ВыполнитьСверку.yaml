@@ -1,7 +1,7 @@
 name: ВыполнитьСверку
-title: Выполнить сверку
 params:
-  - {name: ИмяНастройки, type: string, label: Настройка}
-  - {name: НачалоПериода, type: date, label: Начало периода}
-  - {name: КонецПериода, type: date, label: Конец периода}
-  - {name: Перечитать, type: bool, label: Перечитать без кэша}
+  - {label: Настройка, name: ИмяНастройки, type: string}
+  - {label: Начало периода, name: НачалоПериода, type: date}
+  - {label: Конец периода, name: КонецПериода, type: date}
+  - {label: Перечитать без кэша, name: Перечитать, type: bool}
+title: Выполнить сверку

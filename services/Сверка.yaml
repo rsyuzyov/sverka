@@ -1,8 +1,8 @@
-name: Сверка
-title: Сверка данных для агентов
-root_url: sverka
 auth: basic
+name: Сверка
+root_url: sverka
 templates:
-  - template: /run
-    methods:
+  - methods:
       POST: ЗапуститьСверку
+    template: /run
+title: Сверка данных для агентов

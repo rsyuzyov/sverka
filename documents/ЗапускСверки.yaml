@@ -1,30 +1,30 @@
-name: ЗапускСверки
-title: Запуск сверки
-posting: false
-numerator: {prefix: "СВ-", length: 6}
 fields:
   - {name: Дата, type: date}
   - {name: Настройка, type: "reference:НастройкиСверки"}
-  - {name: НачалоПериода, type: date, title: Начало периода}
-  - {name: КонецПериода, type: date, title: Конец периода}
-  - {name: Перечитать, type: bool, title: Перечитать без кэша}
+  - {name: НачалоПериода, title: Начало периода, type: date}
+  - {name: КонецПериода, title: Конец периода, type: date}
+  - {name: Перечитать, title: Перечитать без кэша, type: bool}
   - {name: Состояние, type: string}
-  - {name: ВремяВыборкиА, type: number, title: "Время выборки А, с"}
-  - {name: ВремяВыборкиБ, type: number, title: "Время выборки Б, с"}
-  - {name: ИзКэшаА, type: bool, title: А из кэша}
-  - {name: ИзКэшаБ, type: bool, title: Б из кэша}
-  - {name: СтрокА, type: number, title: Строк А}
-  - {name: СтрокБ, type: number, title: Строк Б}
-  - {name: ЧислоРасхождений, type: number, title: Число расхождений}
-  - {name: ТекстОшибки, type: text, title: Текст ошибки}
+  - {name: ВремяВыборкиА, title: "Время выборки А, с", type: number}
+  - {name: ВремяВыборкиБ, title: "Время выборки Б, с", type: number}
+  - {name: ИзКэшаА, title: А из кэша, type: bool}
+  - {name: ИзКэшаБ, title: Б из кэша, type: bool}
+  - {name: СтрокА, title: Строк А, type: number}
+  - {name: СтрокБ, title: Строк Б, type: number}
+  - {name: ЧислоРасхождений, title: Число расхождений, type: number}
+  - {name: ТекстОшибки, title: Текст ошибки, type: text}
+name: ЗапускСверки
+numerator: {length: 6, prefix: "СВ-"}
+posting: false
 tableparts:
-  - name: Расхождения
-    fields:
+  - fields:
       - {name: Ключ, type: string}
-      - {name: ПредставлениеКлюча, type: string, title: Представление ключа}
+      - {name: ПредставлениеКлюча, title: Представление ключа, type: string}
       - {name: Поле, type: string}
-      - {name: ЗначениеА, type: number, title: Значение А}
-      - {name: ЗначениеБ, type: number, title: Значение Б}
+      - {name: ЗначениеА, title: Значение А, type: number}
+      - {name: ЗначениеБ, title: Значение Б, type: number}
       - {name: Разница, type: number}
-      - {name: НетВА, type: bool, title: Нет в А}
-      - {name: НетВБ, type: bool, title: Нет в Б}
+      - {name: НетВА, title: Нет в А, type: bool}
+      - {name: НетВБ, title: Нет в Б, type: bool}
+    name: Расхождения
+title: Запуск сверки
