@@ -1,0 +1,8 @@
+name: Источники
+title: Источники данных
+fields:
+  - {name: Наименование, type: string}
+  - {name: Тип, type: "enum:ТипыИсточников", title: Тип источника}
+  - {name: АдресПубликации, type: string, title: Адрес публикации базы}
+  - {name: Пользователь, type: string, title: Пользователь}
+  - {name: СекретПароля, type: string, title: Ссылка на секрет с паролем}

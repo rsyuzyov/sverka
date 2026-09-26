@@ -1,0 +1,8 @@
+name: Сверка
+title: Сверка данных для агентов
+root_url: sverka
+auth: basic
+templates:
+  - template: /run
+    methods:
+      POST: ЗапуститьСверку

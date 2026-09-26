@@ -1,0 +1,30 @@
+name: ЗапускСверки
+title: Запуск сверки
+posting: false
+numerator: {prefix: "СВ-", length: 6}
+fields:
+  - {name: Дата, type: date}
+  - {name: Настройка, type: "reference:НастройкиСверки"}
+  - {name: НачалоПериода, type: date, title: Начало периода}
+  - {name: КонецПериода, type: date, title: Конец периода}
+  - {name: Перечитать, type: bool, title: Перечитать без кэша}
+  - {name: Состояние, type: string}
+  - {name: ВремяВыборкиА, type: number, title: "Время выборки А, с"}
+  - {name: ВремяВыборкиБ, type: number, title: "Время выборки Б, с"}
+  - {name: ИзКэшаА, type: bool, title: А из кэша}
+  - {name: ИзКэшаБ, type: bool, title: Б из кэша}
+  - {name: СтрокА, type: number, title: Строк А}
+  - {name: СтрокБ, type: number, title: Строк Б}
+  - {name: ЧислоРасхождений, type: number, title: Число расхождений}
+  - {name: ТекстОшибки, type: text, title: Текст ошибки}
+tableparts:
+  - name: Расхождения
+    fields:
+      - {name: Ключ, type: string}
+      - {name: ПредставлениеКлюча, type: string, title: Представление ключа}
+      - {name: Поле, type: string}
+      - {name: ЗначениеА, type: number, title: Значение А}
+      - {name: ЗначениеБ, type: number, title: Значение Б}
+      - {name: Разница, type: number}
+      - {name: НетВА, type: bool, title: Нет в А}
+      - {name: НетВБ, type: bool, title: Нет в Б}

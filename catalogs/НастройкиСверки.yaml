@@ -1,0 +1,11 @@
+name: НастройкиСверки
+title: Настройки сверки
+fields:
+  - {name: Наименование, type: string}
+  - {name: ИсточникА, type: "reference:Источники", title: Источник А}
+  - {name: ЗапросА, type: text, title: Текст запроса А}
+  - {name: ИсточникБ, type: "reference:Источники", title: Источник Б}
+  - {name: ЗапросБ, type: text, title: Текст запроса Б}
+  - {name: КлючевыеПоля, type: string, title: Ключевые поля}
+  - {name: ПоляЗначений, type: string, title: Поля значений}
+  - {name: Погрешность, type: number, title: Допустимая погрешность}

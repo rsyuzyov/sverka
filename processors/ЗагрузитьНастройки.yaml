@@ -1,0 +1,4 @@
+name: ЗагрузитьНастройки
+title: Загрузить источники и настройки из JSON
+params:
+  - {name: ПутьКФайлу, type: string, label: Путь к файлу JSON}

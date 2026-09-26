@@ -1,0 +1,12 @@
+name: КэшВыборок
+title: Кэш выборок
+dimensions:
+  - {name: Источник, type: "reference:Источники"}
+  - {name: ХешЗапроса, type: string, title: Хеш текста запроса}
+  - {name: НачалоПериода, type: date, title: Начало периода}
+  - {name: КонецПериода, type: date, title: Конец периода}
+resources:
+  - {name: ТекстЗапроса, type: text, title: Текст запроса}
+  - {name: Данные, type: text, title: Данные JSON}
+  - {name: ДатаСнятия, type: date, title: Дата снятия}
+  - {name: ЧислоСтрок, type: number, title: Число строк}
