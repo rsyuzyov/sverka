@@ -1,0 +1,47 @@
+fields:
+  - {name: Дата, type: date}
+  - {name: Проект, title: Проект сверки, type: "reference:ПроектыСверки"}
+  - {name: Настройки, title: "Настройки (по одной в строке; пусто - все настройки проекта)", type: text}
+  - {name: НачалоПериода, title: Начало периода, type: date}
+  - {name: КонецПериода, title: Конец периода, type: date}
+  - {name: Шаг, title: "Шаг (месяц или весь период)", type: string}
+  - {name: Перечитать, title: Перечитать без кэша, type: bool}
+  - {name: Состояние, type: string}
+  - {name: ИдЗадачи, title: Идентификатор фоновой задачи, type: string}
+  - {name: ЗапусковВсего, title: Запусков, type: number}
+  - {name: ЗапусковСРасхождениями, title: Запусков с расхождениями, type: number}
+  - {name: ЗапусковСОшибкой, title: Запусков с ошибкой, type: number}
+  - {name: Секунд, title: "Время, с", type: number}
+  - {name: ТекстОшибки, title: Текст ошибки, type: text}
+  - {name: ТекстСводки, title: Сводка, type: text}
+name: СерияСверок
+numerator: {length: 6, prefix: "СС-"}
+posting: false
+tableparts:
+  - fields:
+      - {name: Настройка, type: "reference:НастройкиСверки"}
+      - {name: ИмяНастройки, title: Имя настройки, type: string}
+      - {name: НачалоПериода, title: Начало периода, type: date}
+      - {name: КонецПериода, title: Конец периода, type: date}
+      - {name: Запуск, type: "reference:ЗапускСверки"}
+      - {name: Состояние, type: string}
+      - {name: КлючейА, title: Ключей А, type: number}
+      - {name: КлючейБ, title: Ключей Б, type: number}
+      - {name: Совпало, type: number}
+      - {name: Расходится, type: number}
+      - {name: НетВА, title: Нет в А, type: number}
+      - {name: НетВБ, title: Нет в Б, type: number}
+      - {name: Исключено, type: number}
+      - {name: Секунд, title: "Время, с", type: number}
+      - {name: Ошибка, type: string}
+    name: Строки
+  - fields:
+      - {name: ИмяНастройки, title: Имя настройки, type: string}
+      - {name: НачалоПериода, title: Начало периода, type: date}
+      - {name: Поле, type: string}
+      - {name: СуммаА, title: Сумма А, type: number}
+      - {name: СуммаБ, title: Сумма Б, type: number}
+      - {name: Разница, title: "Разница (А - Б)", type: number}
+      - {name: РасхождениеПоМодулю, title: "Расхождение по модулю (без исключенных)", type: number}
+    name: ИтогиПолей
+title: Серия сверок

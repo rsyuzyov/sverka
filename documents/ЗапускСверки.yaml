@@ -12,6 +12,8 @@ fields:
   - {name: СтрокА, title: Строк А, type: number}
   - {name: СтрокБ, title: Строк Б, type: number}
   - {name: СтрокСоответствия, title: Строк соответствия ключей, type: number}
+  - {name: КлючейА, title: Ключей в А, type: number}
+  - {name: КлючейБ, title: Ключей в Б, type: number}
   - {name: КлючейСовпало, title: Ключей совпало, type: number}
   - {name: КлючейРасходится, title: Ключей расходится, type: number}
   - {name: КлючейНетВА, title: Ключей нет в А, type: number}
@@ -37,4 +39,11 @@ tableparts:
       - {name: Помечен, title: Исключен из сверки, type: bool}
       - {name: ПричинаИсключения, title: Причина исключения, type: string}
     name: Расхождения
+  - fields:
+      - {name: Поле, type: string}
+      - {name: СуммаА, title: Сумма А, type: number}
+      - {name: СуммаБ, title: Сумма Б, type: number}
+      - {name: Разница, title: "Разница (А - Б)", type: number}
+      - {name: РасхождениеПоМодулю, title: "Расхождение по модулю (без исключенных)", type: number}
+    name: ИтогиПолей
 title: Запуск сверки

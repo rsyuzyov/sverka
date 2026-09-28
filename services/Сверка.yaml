@@ -8,4 +8,10 @@ templates:
   - methods:
       POST: СинхронизироватьНастройки
     template: /sync
+  - methods:
+      POST: ЗапуститьСерию
+    template: /series
+  - methods:
+      GET: СостояниеСерии
+    template: "/series/{номер}"
 title: Сверка данных для агентов
