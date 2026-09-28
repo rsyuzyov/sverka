@@ -1,6 +1,7 @@
 name: ВыполнитьСверку
 params:
   - {label: Настройка, name: ИмяНастройки, type: string}
+  - {label: "Проект (пусто - настройка ищется во всех проектах)", name: ИмяПроекта, type: string}
   - {label: Начало периода, name: НачалоПериода, type: date}
   - {label: Конец периода, name: КонецПериода, type: date}
   - {label: Перечитать без кэша, name: Перечитать, type: bool}

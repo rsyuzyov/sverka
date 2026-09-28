@@ -1,5 +1,6 @@
 fields:
   - {name: Наименование, type: string}
+  - {name: Проект, title: Проект сверки, type: "reference:ПроектыСверки"}
   - {name: ИсточникА, title: Источник А, type: "reference:Источники"}
   - {name: ЗапросА, title: Текст запроса А, type: text}
   - {name: ИсточникБ, title: Источник Б, type: "reference:Источники"}

@@ -1,5 +1,6 @@
 fields:
   - {name: Наименование, type: string}
+  - {name: Проект, title: Проект сверки, type: "reference:ПроектыСверки"}
   - {name: Тип, title: Тип источника, type: "enum:ТипыИсточников"}
   - {name: АдресПубликации, title: Адрес публикации базы, type: string}
   - {name: Пользователь, title: Пользователь, type: string}

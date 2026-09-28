@@ -5,4 +5,7 @@ templates:
   - methods:
       POST: ЗапуститьСверку
     template: /run
+  - methods:
+      POST: СинхронизироватьНастройки
+    template: /sync
 title: Сверка данных для агентов

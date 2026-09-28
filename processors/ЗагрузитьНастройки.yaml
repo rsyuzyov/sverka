@@ -1,4 +1,5 @@
 name: ЗагрузитьНастройки
 params:
-  - {label: Путь к файлу JSON, name: ПутьКФайлу, type: string}
+  - {label: "Путь к файлу JSON или к каталогу с sources/ и settings/", name: ПутьКФайлу, type: string}
+  - {label: "Проект сверки (пусто - без проекта)", name: ИмяПроекта, type: string}
 title: Загрузить источники и настройки из JSON
