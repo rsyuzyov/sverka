@@ -46,4 +46,14 @@ tableparts:
       - {name: Разница, title: "Разница (А - Б)", type: number}
       - {name: РасхождениеПоМодулю, title: "Расхождение по модулю (без исключенных)", type: number}
     name: ИтогиПолей
+  - fields:
+      - {name: Ключ, type: string}
+      - {name: ПредставлениеКлюча, title: Представление ключа, type: string}
+      - {name: Поле, type: string}
+      - {name: ЗначениеА, title: Значение А, type: number}
+      - {name: ЗначениеБ, title: Значение Б, type: number}
+      - {name: Разница, type: number}
+      - {name: НетВА, title: Нет в А, type: bool}
+      - {name: НетВБ, title: Нет в Б, type: bool}
+    name: Ключи
 title: Запуск сверки
