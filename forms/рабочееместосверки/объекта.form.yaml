@@ -1,0 +1,372 @@
+elements:
+  - children:
+      - choice: true
+        data_path: Объект.Проект
+        events:
+          ПриИзменении: ПроектПриИзменении
+        kind: ПолеВвода
+        name: ПолеПроект
+        title:
+          ru: Проект сверки
+      - data_path: Объект.НачалоПериода
+        kind: ПолеДаты
+        name: ПолеНачалоПериода
+        title:
+          ru: Период с
+      - data_path: Объект.КонецПериода
+        kind: ПолеДаты
+        name: ПолеКонецПериода
+        title:
+          ru: по
+      - data_path: Объект.Перечитать
+        kind: Флажок
+        name: ФлажокПеречитать
+        title:
+          ru: Перечитать без кэша
+      - events:
+          Нажатие: СравнитьНажатие
+        kind: Кнопка
+        name: КнопкаСравнить
+        title:
+          ru: Сравнить
+    kind: ГруппаФормы
+    name: ГруппаШапка
+    orientation: horizontal
+  - children:
+      - children:
+          - children:
+              - data_path: Объект.Настройки.Наименование
+                kind: Колонка
+                name: КолНаименование
+                readonly: true
+                title:
+                  ru: Наименование
+            data_path: Объект.Настройки
+            events:
+              ПриАктивизацииСтроки: НастройкиПриАктивизацииСтроки
+            height: 30
+            kind: ТабличнаяЧасть
+            name: ТабНастройки
+        kind: ГруппаФормы
+        name: ГруппаСписокНастроек
+        title:
+          ru: Настройки
+        width: 30
+      - children:
+          - children:
+              - children:
+                  - choice: true
+                    data_path: Объект.Настройка
+                    events:
+                      ПриИзменении: НастройкаПриИзменении
+                    kind: ПолеВвода
+                    name: ПолеНастройка
+                    title:
+                      ru: Текущая настройка
+                  - data_path: Объект.ОтборКлюча
+                    events:
+                      ПриИзменении: ОтображениеПриИзменении
+                    kind: ПолеВвода
+                    name: ПолеОтборКлюча
+                    title:
+                      ru: Отбор
+                  - events:
+                      Нажатие: РасшифроватьНажатие
+                    kind: Кнопка
+                    name: КнопкаРасшифровать
+                    title:
+                      ru: Расшифровать строку
+                  - events:
+                      Нажатие: НазадНажатие
+                    kind: Кнопка
+                    name: КнопкаНазад
+                    title:
+                      ru: К общей сверке
+                kind: ГруппаФормы
+                name: ГруппаТекущая
+                orientation: horizontal
+              - children:
+                  - data_path: Объект.ТолькоОтличия
+                    events:
+                      ПриИзменении: ОтображениеПриИзменении
+                    kind: Флажок
+                    name: ФлажокТолькоОтличия
+                    title:
+                      ru: Отображать только отличия
+                  - data_path: Объект.Погрешность
+                    events:
+                      ПриИзменении: ОтображениеПриИзменении
+                    kind: ПолеВвода
+                    name: ПолеПогрешность
+                    title:
+                      ru: Допустимая погрешность
+                  - events:
+                      Нажатие: ВыгрузитьВExcelНажатие
+                    kind: Кнопка
+                    name: КнопкаExcel
+                    title:
+                      ru: Выгрузить в Excel
+                kind: ГруппаФормы
+                name: ГруппаОпции
+                orientation: horizontal
+              - children:
+                  - data_path: Объект.Итог
+                    kind: ПолеВвода
+                    name: ПолеИтог
+                    readonly: true
+                    title:
+                      ru: Итог
+                  - choice: true
+                    data_path: Объект.Запуск
+                    events:
+                      ПриИзменении: ЗапускПриИзменении
+                    kind: ПолеВвода
+                    name: ПолеЗапуск
+                    title:
+                      ru: Запуск сверки
+                  - data_path: Объект.ТекущийКлюч
+                    hidden_when: Истина
+                    kind: ПолеВвода
+                    name: ПолеТекущийКлюч
+                    title:
+                      ru: Текущая строка
+                kind: ГруппаФормы
+                name: ГруппаСостояние
+                orientation: horizontal
+              - children:
+                  - data_path: Объект.Результат.Представление
+                    kind: Колонка
+                    name: КолПредставление
+                    readonly: true
+                    title:
+                      ru: Ключ
+                  - data_path: Объект.Результат.Поле
+                    kind: Колонка
+                    name: КолПоле
+                    readonly: true
+                    title:
+                      ru: Поле
+                  - data_path: Объект.Результат.ЗначениеА
+                    kind: Колонка
+                    name: КолЗначениеА
+                    readonly: true
+                    title:
+                      ru: А
+                  - data_path: Объект.Результат.ЗначениеБ
+                    kind: Колонка
+                    name: КолЗначениеБ
+                    readonly: true
+                    title:
+                      ru: Б
+                  - data_path: Объект.Результат.Разница
+                    kind: Колонка
+                    name: КолРазница
+                    readonly: true
+                    title:
+                      ru: Разница
+                  - data_path: Объект.Результат.Эталон
+                    events:
+                      ПриИзменении: ПояснениеПриИзменении
+                    kind: Колонка
+                    name: КолЭталон
+                    title:
+                      ru: Эталон
+                  - data_path: Объект.Результат.Пояснение
+                    events:
+                      ПриИзменении: ПояснениеПриИзменении
+                    kind: Колонка
+                    name: КолПояснение
+                    title:
+                      ru: Пояснение
+                data_path: Объект.Результат
+                events:
+                  ПриАктивизацииСтроки: РезультатПриАктивизацииСтроки
+                height: 30
+                kind: ТабличнаяЧасть
+                name: ТабРезультат
+            kind: Страница
+            name: СтраницаСравнение
+            title:
+              ru: Сравнение
+          - children:
+              - children:
+                  - events:
+                      Нажатие: ЗаписатьНастройкуНажатие
+                    kind: Кнопка
+                    name: КнопкаЗаписатьНастройку
+                    title:
+                      ru: Записать настройку
+                  - events:
+                      Нажатие: НоваяНастройкаНажатие
+                    kind: Кнопка
+                    name: КнопкаНоваяНастройка
+                    title:
+                      ru: Новая настройка
+                  - events:
+                      Нажатие: КопироватьНастройкуНажатие
+                    kind: Кнопка
+                    name: КнопкаКопироватьНастройку
+                    title:
+                      ru: Скопировать настройку
+                kind: ГруппаФормы
+                name: ГруппаНастройкаКнопки
+                orientation: horizontal
+              - data_path: Объект.ННаименование
+                kind: ПолеВвода
+                name: ПолеННаименование
+                title:
+                  ru: Наименование
+              - children:
+                  - choice: true
+                    data_path: Объект.НИсточникА
+                    kind: ПолеВвода
+                    name: ПолеНИсточникА
+                    title:
+                      ru: Источник А
+                  - choice: true
+                    data_path: Объект.НИсточникБ
+                    kind: ПолеВвода
+                    name: ПолеНИсточникБ
+                    title:
+                      ru: Источник Б
+                kind: ГруппаФормы
+                name: ГруппаИсточникиНастройки
+                orientation: horizontal
+              - children:
+                  - data_path: Объект.НКлючевыеПоля
+                    kind: ПолеВвода
+                    name: ПолеНКлючевыеПоля
+                    title:
+                      ru: Ключевые поля
+                  - data_path: Объект.НПоляЗначений
+                    kind: ПолеВвода
+                    name: ПолеНПоляЗначений
+                    title:
+                      ru: Поля значений
+                  - data_path: Объект.НПогрешность
+                    kind: ПолеВвода
+                    name: ПолеНПогрешность
+                    title:
+                      ru: Допустимая погрешность
+                kind: ГруппаФормы
+                name: ГруппаПоля
+                orientation: horizontal
+              - children:
+                  - data_path: Объект.НСоответствиеНаА
+                    kind: Флажок
+                    name: ФлажокНСоответствиеНаА
+                    title:
+                      ru: Запрос соответствия ключей - на источнике А
+                  - data_path: Объект.НВсеКлючи
+                    kind: Флажок
+                    name: ФлажокНВсеКлючи
+                    title:
+                      ru: "Сохранять все ключи, а не только расхождения"
+                  - data_path: Объект.НРасшифровка
+                    kind: ПолеВвода
+                    name: ПолеНРасшифровка
+                    title:
+                      ru: Настройка расшифровки ключа
+                  - data_path: Объект.НПоляБезУчетаФормата
+                    kind: ПолеВвода
+                    name: ПолеНПоляБезУчетаФормата
+                    title:
+                      ru: "Поля без учета регистра, пробелов и запятых"
+                kind: ГруппаФормы
+                name: ГруппаПризнаки
+                orientation: horizontal
+              - children:
+                  - data_path: Объект.НЗапросА
+                    height: 14
+                    kind: ПолеВвода
+                    multiline: true
+                    name: ПолеНЗапросА
+                    title:
+                      ru: Запрос А
+                  - data_path: Объект.НЗапросБ
+                    height: 14
+                    kind: ПолеВвода
+                    multiline: true
+                    name: ПолеНЗапросБ
+                    title:
+                      ru: Запрос Б
+                kind: ГруппаФормы
+                name: ГруппаЗапросы
+                orientation: horizontal
+              - data_path: Объект.НЗапросСоответствияБ
+                height: 5
+                kind: ПолеВвода
+                multiline: true
+                name: ПолеНЗапросСоответствияБ
+                title:
+                  ru: "Запрос соответствия ключей Б (КлючА, КлючБ; пакет - через строку «;»)"
+              - data_path: Объект.НПорцииЗапроса
+                height: 3
+                kind: ПолеВвода
+                multiline: true
+                name: ПолеНПорцииЗапроса
+                title:
+                  ru: "Порции запроса (условия вместо &Порция, по одному в строке)"
+              - data_path: Объект.НПояснения
+                height: 8
+                kind: ПолеВвода
+                multiline: true
+                name: ПолеНПояснения
+                title:
+                  ru: "Пояснения: ключ :: эталон :: причина"
+            kind: Страница
+            name: СтраницаНастройка
+            title:
+              ru: Настройка
+          - children:
+              - kind: Надпись
+                name: НадписьИсточники
+                title:
+                  ru: "Источники проекта. Правка - в справочнике «Источники данных», пароли - только ссылками на секреты file:."
+              - children:
+                  - data_path: Объект.Источники.Источник
+                    kind: Колонка
+                    name: КолИсточник
+                    readonly: true
+                    title:
+                      ru: Источник
+                  - data_path: Объект.Источники.Тип
+                    kind: Колонка
+                    name: КолТип
+                    readonly: true
+                    title:
+                      ru: Тип
+                  - data_path: Объект.Источники.Адрес
+                    kind: Колонка
+                    name: КолАдрес
+                    readonly: true
+                    title:
+                      ru: Адрес
+                  - data_path: Объект.Источники.Пользователь
+                    kind: Колонка
+                    name: КолПользователь
+                    readonly: true
+                    title:
+                      ru: Пользователь
+                data_path: Объект.Источники
+                kind: ТабличнаяЧасть
+                name: ТабИсточники
+                readonly: true
+            kind: Страница
+            name: СтраницаИсточники
+            title:
+              ru: Источники
+        kind: СтраницыФормы
+        name: Закладки
+    kind: ГруппаФормы
+    name: ГруппаТело
+    orientation: horizontal
+events:
+  ПриОткрытии: ПриОткрытииФормы
+form:
+  entity: РабочееМестоСверки
+  kind: processor
+  name: ФормаОбработки
+  title:
+    ru: Сверка данных
+schema: onebase.form/v1

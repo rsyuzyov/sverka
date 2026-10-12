@@ -1,0 +1,53 @@
+name: РабочееМестоСверки
+params:
+  - {label: Проект сверки, name: Проект, type: "reference:ПроектыСверки"}
+  - {label: Период с, name: НачалоПериода, type: date}
+  - {label: по, name: КонецПериода, type: date}
+  - {label: Перечитать без кэша, name: Перечитать, type: bool}
+  - {label: Текущая настройка, name: Настройка, type: "reference:НастройкиСверки"}
+  - {default: true, label: Отображать только отличия, name: ТолькоОтличия, type: bool}
+  - {label: Допустимая погрешность, name: Погрешность, type: number}
+  - {label: Отбор, name: ОтборКлюча, type: string}
+  - {label: Текущая строка, name: ТекущийКлюч, type: string}
+  - {label: Запуск сверки, name: Запуск, type: "reference:ЗапускСверки"}
+  - {label: Итог, name: Итог, type: string}
+  - {label: Наименование, name: ННаименование, type: string}
+  - {label: Источник А, name: НИсточникА, type: "reference:Источники"}
+  - {label: Источник Б, name: НИсточникБ, type: "reference:Источники"}
+  - {label: Ключевые поля, name: НКлючевыеПоля, type: string}
+  - {label: Поля значений, name: НПоляЗначений, type: string}
+  - {label: Допустимая погрешность, name: НПогрешность, type: number}
+  - {label: "Поля без учета регистра, пробелов и запятых", name: НПоляБезУчетаФормата, type: string}
+  - {label: Запрос соответствия ключей - на источнике А, name: НСоответствиеНаА, type: bool}
+  - {label: "Сохранять все ключи, а не только расхождения", name: НВсеКлючи, type: bool}
+  - {label: Настройка расшифровки ключа, name: НРасшифровка, type: string}
+  - {label: "Порции запроса (условия вместо &Порция, по одному в строке)", name: НПорцииЗапроса, type: text}
+  - {label: Запрос А, name: НЗапросА, type: text}
+  - {label: Запрос Б, name: НЗапросБ, type: text}
+  - {label: "Запрос соответствия ключей Б (КлючА, КлючБ; пакет - через строку «;»)", name: НЗапросСоответствияБ, type: text}
+  - {label: "Пояснения: ключ :: эталон :: причина", name: НПояснения, type: text}
+table_parts:
+  - fields:
+      - {name: Настройка, type: "reference:НастройкиСверки"}
+      - {name: Наименование, type: string}
+    name: Настройки
+  - fields:
+      - {name: Ключ, type: string}
+      - {name: Представление, type: string}
+      - {name: Поле, type: string}
+      - {name: ЗначениеА, title: А, type: number}
+      - {name: ЗначениеБ, title: Б, type: number}
+      - {name: Разница, type: number}
+      - {name: Эталон, type: string}
+      - {name: Пояснение, type: string}
+      - {name: Расходится, type: bool}
+      - {name: НетВА, title: Нет в А, type: bool}
+      - {name: НетВБ, title: Нет в Б, type: bool}
+    name: Результат
+  - fields:
+      - {name: Источник, type: "reference:Источники"}
+      - {name: Тип, type: string}
+      - {name: Адрес, type: string}
+      - {name: Пользователь, type: string}
+    name: Источники
+title: Сверка данных
