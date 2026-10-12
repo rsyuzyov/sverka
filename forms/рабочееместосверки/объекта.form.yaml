@@ -44,14 +44,14 @@ elements:
             data_path: Объект.Настройки
             events:
               ПриАктивизацииСтроки: НастройкиПриАктивизацииСтроки
-            height: 30
+            height: 520
             kind: ТабличнаяЧасть
             name: ТабНастройки
         kind: ГруппаФормы
         name: ГруппаСписокНастроек
         title:
           ru: Настройки
-        width: 30
+        width: 280
       - children:
           - children:
               - children:
@@ -116,6 +116,7 @@ elements:
                     readonly: true
                     title:
                       ru: Итог
+                    width: 700
                   - choice: true
                     data_path: Объект.Запуск
                     events:
@@ -181,7 +182,7 @@ elements:
                 data_path: Объект.Результат
                 events:
                   ПриАктивизацииСтроки: РезультатПриАктивизацииСтроки
-                height: 30
+                height: 520
                 kind: ТабличнаяЧасть
                 name: ТабРезультат
             kind: Страница
@@ -277,38 +278,40 @@ elements:
                 orientation: horizontal
               - children:
                   - data_path: Объект.НЗапросА
-                    height: 14
+                    height: 300
                     kind: ПолеВвода
                     multiline: true
                     name: ПолеНЗапросА
                     title:
                       ru: Запрос А
+                    width: 520
                   - data_path: Объект.НЗапросБ
-                    height: 14
+                    height: 300
                     kind: ПолеВвода
                     multiline: true
                     name: ПолеНЗапросБ
                     title:
                       ru: Запрос Б
+                    width: 520
                 kind: ГруппаФормы
                 name: ГруппаЗапросы
                 orientation: horizontal
               - data_path: Объект.НЗапросСоответствияБ
-                height: 5
+                height: 110
                 kind: ПолеВвода
                 multiline: true
                 name: ПолеНЗапросСоответствияБ
                 title:
                   ru: "Запрос соответствия ключей Б (КлючА, КлючБ; пакет - через строку «;»)"
               - data_path: Объект.НПорцииЗапроса
-                height: 3
+                height: 60
                 kind: ПолеВвода
                 multiline: true
                 name: ПолеНПорцииЗапроса
                 title:
                   ru: "Порции запроса (условия вместо &Порция, по одному в строке)"
               - data_path: Объект.НПояснения
-                height: 8
+                height: 170
                 kind: ПолеВвода
                 multiline: true
                 name: ПолеНПояснения
@@ -358,6 +361,7 @@ elements:
               ru: Источники
         kind: СтраницыФормы
         name: Закладки
+        width: 1100
     kind: ГруппаФормы
     name: ГруппаТело
     orientation: horizontal

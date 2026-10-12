@@ -5,7 +5,7 @@ params:
   - {label: по, name: КонецПериода, type: date}
   - {label: Перечитать без кэша, name: Перечитать, type: bool}
   - {label: Текущая настройка, name: Настройка, type: "reference:НастройкиСверки"}
-  - {default: true, label: Отображать только отличия, name: ТолькоОтличия, type: bool}
+  - {default: false, label: Отображать только отличия, name: ТолькоОтличия, type: bool}
   - {label: Допустимая погрешность, name: Погрешность, type: number}
   - {label: Отбор, name: ОтборКлюча, type: string}
   - {label: Текущая строка, name: ТекущийКлюч, type: string}
