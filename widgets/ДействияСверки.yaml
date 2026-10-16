@@ -1,0 +1,7 @@
+name: ДействияСверки
+type: actions
+title: Сверка
+items:
+  - {label: Сверка на дату, url: /ui/page/Сверка}
+  - {label: Рабочее место сверки, url: /ui/processor/РабочееМестоСверки}
+  - {label: Серии сверок, url: /ui/document/СерияСверок}

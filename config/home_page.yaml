@@ -1,0 +1,28 @@
+# Главная базы сверки: куда идти пользователю (бухгалтеру) - сверка на дату и рабочее место, последние запуски.
+title: Сверка данных
+layout: rows
+nav:
+  pages: [Сверка]
+  processors: [РабочееМестоСверки]
+  documents: [ЗапускСверки, СерияСверок]
+  catalogs: [ПроектыСверки, НастройкиСверки, Источники]
+menu:
+  sections:
+    - id: sverka
+      title: Сверка
+      icon: scale
+      items:
+        - {id: sverka-na-datu, target: "page:Сверка", title: Сверка на дату, icon: scale}
+        - {id: rabochee-mesto, target: "processor:РабочееМестоСверки", title: Рабочее место сверки, icon: table}
+        - {id: zapuski, target: "document:ЗапускСверки", title: Запуски сверки, icon: history}
+        - {id: serii, target: "document:СерияСверок", title: Серии сверок, icon: list-checks}
+    - id: nastroyki
+      title: Настройки
+      icon: settings
+      items:
+        - {id: proekty, target: "catalog:ПроектыСверки", title: Проекты сверки}
+        - {id: nastroyki-sverki, target: "catalog:НастройкиСверки", title: Настройки сверки}
+        - {id: istochniki, target: "catalog:Источники", title: Источники данных}
+rows:
+  - widgets: [ДействияСверки]
+  - widgets: [ПоследниеЗапускиСверки]
