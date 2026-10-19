@@ -8,6 +8,9 @@ params:
   - {default: false, label: Отображать только отличия, name: ТолькоОтличия, type: bool}
   - {label: Допустимая погрешность, name: Погрешность, type: number}
   - {label: Отбор, name: ОтборКлюча, type: string}
+  - {label: Найти, name: Поиск, type: string}
+  - {default: 1, label: Страница, name: Страница, type: number}
+  - {label: Страницы, name: Страницы, type: string}
   - {label: Текущая строка, name: ТекущийКлюч, type: string}
   - {label: Запуск сверки, name: Запуск, type: "reference:ЗапускСверки"}
   - {label: Итог, name: Итог, type: string}

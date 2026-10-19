@@ -135,6 +135,36 @@ elements:
                 name: ГруппаСостояние
                 orientation: horizontal
               - children:
+                  - data_path: Объект.Поиск
+                    events:
+                      ПриИзменении: ОтображениеПриИзменении
+                    kind: ПолеВвода
+                    name: ПолеПоиск
+                    title:
+                      ru: Найти
+                  - events:
+                      Нажатие: СтраницаНазадНажатие
+                    kind: Кнопка
+                    name: КнопкаСтраницаНазад
+                    title:
+                      ru: ◀ Назад
+                  - data_path: Объект.Страницы
+                    kind: ПолеВвода
+                    name: ПолеСтраницы
+                    readonly: true
+                    title:
+                      ru: Страница
+                    width: 320
+                  - events:
+                      Нажатие: СтраницаВпередНажатие
+                    kind: Кнопка
+                    name: КнопкаСтраницаВперед
+                    title:
+                      ru: Вперед ▶
+                kind: ГруппаФормы
+                name: ГруппаСтраницы
+                orientation: horizontal
+              - children:
                   - data_path: Объект.Результат.Представление
                     kind: Колонка
                     name: КолПредставление
